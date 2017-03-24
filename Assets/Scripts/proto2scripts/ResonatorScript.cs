@@ -51,30 +51,48 @@ public class ResonatorScript : MonoBehaviour {
 	//	MAXPULSES - how many times it has pulses since being turned ON
 	int pulsesRemaining;
 
+	public bool hasBeenActivated;
+
 	void Start () {
 		//	nothing is resonating on start
 		isResonating = false;
-		SetMyColor ();
+		hasBeenActivated = false;
+		//SetMyColor ();
+		GetComponent<Renderer>().material.color = noRes;
+
 		MAXPULSES = numSides;
+		//MAXPULSES = 1;
+
+	}
+
+	void Update() {
+		if (this.GetComponentInParent<PappasBigRotate> () == null) {
+			//print ("AH");
+		} else if (this.GetComponentInParent<PappasBigRotate> ().isRotating) {
+			isResonating = false;
+			SetMyColor ();
+			CancelInvoke ("ExecutePulse");
+		}
 	}
 
 	//	I HAVE BEEN ACTIVATED BY ANOTHER PULSE!
 	void OnTriggerEnter2D(Collider2D coll) {
-		
-		//	I was OFF and now I am ON
-		if (!isResonating) {
-			InvokeRepeating ("ExecutePulse", 1, 4);
-			isResonating = true;
-		//	I was ON and now I am OFF
-		} else if (isResonating) {
-			isResonating = false;
-			CancelInvoke ("ExecutePulse");
-		}
+
+		hasBeenActivated = true;
+			//	I was OFF and now I am ON
+			if (!isResonating) {
+				InvokeRepeating ("ExecutePulse", 1, 4);
+				isResonating = true;
+				//	I was ON and now I am OFF
+			} else if (isResonating) {
+				isResonating = false;
+				CancelInvoke ("ExecutePulse");
+			}
 			
-		SetMyColor ();
+			SetMyColor ();
 
-		pulsesRemaining = MAXPULSES;
-
+			pulsesRemaining = MAXPULSES;
+		
 	}
 
 	//	resonators pulsate at regular intervals
@@ -113,8 +131,10 @@ public class ResonatorScript : MonoBehaviour {
 	//	if it is not resonating its a darking kinda blackish color
 	void SetMyColor () {
 		if (isResonating) {
-			GetComponent<Renderer>().material.color = Color.white;
-		} else {
+			GetComponent<Renderer> ().material.color = Color.white;
+		} else if (!isResonating && hasBeenActivated) {
+			GetComponent<Renderer> ().material.color = Color.gray;
+		} else if (!isResonating && !hasBeenActivated) {
 			GetComponent<Renderer>().material.color = noRes;
 		}
 	}
@@ -122,6 +142,6 @@ public class ResonatorScript : MonoBehaviour {
 	//	sends its identity to the music program
 	//	each resonator makes a different sound when it pulses depending on its shape
 	void SendNumSides(int x) {
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+		OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
 	}
 }

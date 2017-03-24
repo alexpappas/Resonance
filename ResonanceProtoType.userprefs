@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/proto2scripts/PappasLines.cs">
+    <Files>
+      <File FileName="Assets/Scripts/proto2scripts/PappasBigRotate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/PlayerScriptProto2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/ResonatorScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/PulseGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/PulseGroupScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/FoodScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/proto2scripts/PappasLines.cs" Line="17" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

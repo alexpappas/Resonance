@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 		OSCHandler.Instance.Init ();
 
 		//	a message of 0 turns the signal processing on
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
+		OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", 0);
 
 		//	start game with 5 sides
 		numSides = 5;
@@ -68,6 +68,6 @@ public class GameManager : MonoBehaviour {
 
 	//	sends the number of sides the player has to the music program
 	void SendNumSides(int x) {
-		//OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
+		OSCHandler.Instance.SendMessageToClient ("MAX", "127.0.0.1", x);
 	}
 }
