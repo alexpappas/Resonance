@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/protoL01.unity
+- path: Assets/Resources/Scenes/TestLevel.unity
   isLoaded: 1
   isActive: 1
