@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - component
-  - mother
-  - wall1
-  - wall2
-  - foodring
   - resonator
+  - pulse
+  - pearl
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A37B2DC3-D606-07C3-BC03-BBB31795630F}</ProjectGuid>
+    <ProjectGuid>{1EC4266B-582F-3FF1-EF4C-D46CC3F07322}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -52,14 +52,13 @@
      <Compile Include="Assets\OSC\OSCPacket.cs" />
      <Compile Include="Assets\OSC\OSCServer.cs" />
      <Compile Include="Assets\OSCHandler.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\FoodScript.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\PappasBigRotate.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\PappasLines.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\PlayerScriptProto2.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\PulseGenerator.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\PulseGroupScript.cs" />
-     <Compile Include="Assets\Scripts\proto2scripts\ResonatorScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\FoodScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Resources\Scripts\PappasBigRotate.cs" />
+     <Compile Include="Assets\Resources\Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseGroupScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\PulseScript.cs" />
+     <Compile Include="Assets\Resources\Scripts\ResonatorScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
