@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Resources/Scenes/TestLevel.unity
+- path: Assets/proto2gLEVEL.unity
   isLoaded: 1
   isActive: 1
